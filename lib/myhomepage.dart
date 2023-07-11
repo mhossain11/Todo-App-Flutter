@@ -15,6 +15,7 @@ class MyHomepage extends StatefulWidget {
 
 class _MyHomepageState extends State<MyHomepage> {
   var taskWriteController =TextEditingController();
+  bool value =false;
   //Create new Task
 
   @override
@@ -43,14 +44,15 @@ class _MyHomepageState extends State<MyHomepage> {
                 return  ToDoTileItem(
                   taskName: data[index].title.toString(),
                   taskCompleted: data[index].task,
-                  taskOnChanged: (value){
+                  taskOnChanged: (value) {
                     setState(() {
-                      data[index].task=!data[index].task;
+                      data[index].task =!data[index].task;
+                      data[index].save();
                     });
                   },
                     deleteFunction: (context) => deleteTask(data[index]),
                    updateTask:() {
-                     updateTask(data[index], data[index].title.toString());
+                     updateTask(data[index] ,data[index].title.toString(),value);
                    }
                 );
               }
@@ -93,7 +95,7 @@ class _MyHomepageState extends State<MyHomepage> {
     await notesModel.delete();
   }
 // Update
-  updateTask(NotesModel notesModel, String title) {
+  updateTask(NotesModel notesModel, String title, bool value) {
     taskWriteController.text = title;
    showDialog(context: context, builder: (context){
       return Dialogs(
@@ -105,6 +107,7 @@ class _MyHomepageState extends State<MyHomepage> {
 
           }else{
             notesModel.title=taskWriteController.text.toString();
+            notesModel.task=value;
             notesModel.save();
 
             taskWriteController.clear();
@@ -118,6 +121,13 @@ class _MyHomepageState extends State<MyHomepage> {
 
 
 
+  }
+
+  checkBoxtapped(bool? value,int index) {
+    setState(() {
+
+
+    });
   }
 }
 

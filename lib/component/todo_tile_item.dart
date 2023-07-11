@@ -51,7 +51,7 @@ class ToDoTileItem extends StatelessWidget {
               ),
               const SizedBox(width: 2,),
                //Text
-               Expanded(child: Text(taskName,style: TextStyle(decoration: taskCompleted ? TextDecoration.lineThrough :TextDecoration.none),)),
+               Expanded(child: Text(taskName,style: TextStyle(fontSize: 18 ,decoration: taskCompleted ? TextDecoration.lineThrough :TextDecoration.none),)),
               const SizedBox(width: 5,),
               //update icon
               InkWell(
