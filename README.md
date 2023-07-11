@@ -1,16 +1,15 @@
 # todoapp_f
 
-A new Flutter project.
+this is the Todo app. 
 
 ## Getting Started
+https://github.com/mhossain11/Todo-App-Flutter/assets/56032040/94a3bb92-64ad-4633-9508-ff11f1176ecb
 
-This project is a starting point for a Flutter application.
+#Technology Used
 
-A few resources to get you started if this is your first Flutter project:
+Dart
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+#Working Features
+
+Create, Update, Read, Delete, text null validation
