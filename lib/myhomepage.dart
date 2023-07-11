@@ -122,13 +122,6 @@ class _MyHomepageState extends State<MyHomepage> {
 
 
   }
-
-  checkBoxtapped(bool? value,int index) {
-    setState(() {
-
-
-    });
-  }
 }
 
 
